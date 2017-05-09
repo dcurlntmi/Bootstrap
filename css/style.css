@@ -83,6 +83,11 @@ header.jumbotron:after {
     top: 0;
     background-color: rgba(0, 0, 0, .5);
     z-index: 1;
+    transition: all .5s ease;
+}
+
+header.jumbotron.scroll:after {
+    background-color: rgba(0, 0, 0, .1);
 }
 
 .jumbotron-content {
@@ -160,6 +165,31 @@ header.jumbotron h1 {
     padding-bottom: 0;
 }
 
+#portfolioSection .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#slideshow .item {
+    height: 270px;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+    background-image: none;
+}
+
+@media screen and (max-width: 767px) {
+    #slideshow .item {
+        height: 500px;
+    }
+    #slideshow .item img {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+    }
+}
+
 .photo {
     height: 250px;
     text-align: center;
@@ -231,3 +261,83 @@ header.jumbotron h1 {
 
 
 /* note footer */
+
+footer {
+    padding-top: 30px;
+    background-color: #314858;
+    color: white;
+    text-align: center;
+}
+
+footer * {
+    color: white;
+}
+
+.footer-bar {
+    width: 100%;
+    height: 50px;
+    background-color: #22262c;
+}
+
+.footer-bar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-bar ul>li {
+    float: left;
+    line-height: 50px;
+    margin-right: 10px;
+}
+
+.footer-bar p {
+    float: right;
+    line-height: 50px;
+    margin: 0;
+}
+
+.social-links a {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 8px;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.social-links a:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.social-links a>i.fa:before {
+    line-height: 40px;
+    color: #314858;
+}
+
+#scrollTopBtn {
+    width: 70px;
+    height: 70px;
+    background-color: #2462aa;
+    text-align: center;
+    line-height: 70px;
+    color: white;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    display: none;
+}
+
+#scrollTopBtn.scroll {
+    display: block;
+}
+
+#scrollTopBtn:hover,
+#scrollTopBtn:focus {
+    text-decoration: none;
+    outline: none;
+}
